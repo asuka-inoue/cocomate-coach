@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.c-btn-header {
+  display: inline-block;
+  color: $white;
+  font-size: rem(15);
+  font-weight: bold;
+  line-height: calc(27 / 15);
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: rem(10) rem(18);
+  min-width: rem(180);
+  background: $brown;
+  border-radius: 3px;
+  border: 2px solid $brown;
+}
+
+.c-btn-header:hover {
+  @include mq(md) {
+    background: $white;
+    color: $brown;
+    opacity: 1;
+  }
+}
+
+.c-btn-header--blue {
+  min-width: rem(170);
+  background: $blue;
+  border: 2px solid $blue;
+}
+
+.c-btn-header--blue:hover {
+  @include mq(md) {
+    color: $blue;
+  }
+}

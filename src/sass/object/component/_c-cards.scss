@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.c-cards {
+  @include mq(md) {
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: rem(21);
+  }
+}

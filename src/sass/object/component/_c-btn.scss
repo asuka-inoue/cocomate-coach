@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.c-btn {
+  display: inline-block;
+  color: $white;
+  font-size: rem(15);
+  font-weight: bold;
+  line-height: calc(27 / 15);
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: rem(10) rem(37);
+  min-width: rem(280);
+  background: $brown;
+  border-radius: 3px;
+  border: 2px solid $brown;
+}
+
+.c-btn:hover {
+  @include mq(md) {
+    background: $white;
+    color: $brown;
+    opacity: 1;
+  }
+}
+
+.c-btn--mv {
+  padding: rem(11) rem(38);
+  min-width: rem(220);
+}
+

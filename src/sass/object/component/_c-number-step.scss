@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.c-number-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(36);
+  font-family: $font-sub;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.c-number-step span {
+  font-size: rem(12);
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding-left: 3px;
+}
+
+.c-number-step--circle {
+  color: $white;
+  background: $brown;
+  border-radius: 50%;
+  width: rem(90);
+  height: rem(90);
+}

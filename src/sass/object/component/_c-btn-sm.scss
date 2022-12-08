@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.c-btn-sm {
+  display: inline-block;
+  color: $white;
+  font-size: rem(13);
+  font-weight: bold;
+  line-height: calc(20 / 13);
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: rem(7);
+  min-width: rem(162);
+  background: $brown;
+  border-radius: 3px;
+  border: 2px solid $brown;
+}
+
+.c-btn-sm:hover {
+  @include mq(md) {
+    background: $white;
+    color: $brown;
+    opacity: 1;
+  }
+}
+
+.c-btn-sm--blue {
+  background: $blue;
+  border: 2px solid $blue;
+}
+
+.c-btn-sm--blue:hover {
+  @include mq(md) {
+    color: $blue;
+  }
+}
