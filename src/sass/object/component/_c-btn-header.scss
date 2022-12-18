@@ -9,10 +9,13 @@
   letter-spacing: 0.04em;
   text-align: center;
   padding: rem(10) rem(18);
-  min-width: rem(180);
+  min-width: rem(250);
   background: $brown;
   border-radius: 3px;
   border: 2px solid $brown;
+  @include mq(md) {
+    min-width: rem(182);
+  }
 }
 
 .c-btn-header:hover {
@@ -24,9 +27,12 @@
 }
 
 .c-btn-header--blue {
-  min-width: rem(170);
+  min-width: rem(250);
   background: $blue;
   border: 2px solid $blue;
+  @include mq(md) {
+    min-width: rem(170);
+  }
 }
 
 .c-btn-header--blue:hover {

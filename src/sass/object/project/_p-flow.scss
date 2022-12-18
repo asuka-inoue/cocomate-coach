@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.p-flow {
+  background: $brown2;
+}
+
+.p-flow__contents {
+  margin-top: rem(40);
+  padding: rem(20);
+  background: $white;
+  @include mq(md) {
+    padding: rem(50) rem(89) rem(40);
+  }
+}
+
+.p-flow__item + .p-flow__item {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(8);
+
+  }
+}

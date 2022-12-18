@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.p-main-view2__title {
+  font-size: rem(24);
+  font-weight: 900;
+  line-height: calc(34 / 24);
+  letter-spacing: .04em;
+}
+
+.p-main-view2__text {
+  font-size: rem(16);
+  line-height: calc(27 / 15);
+  letter-spacing: .04em;
+  margin-top: rem(20);
+  @include mq(md) {
+    font-size: rem(15);
+  }
+}

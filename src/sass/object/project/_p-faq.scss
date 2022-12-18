@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.p-faq {
+  background: $brown2;
+}
+
+.p-faq__wrapper {
+  margin-top: rem(40);
+}

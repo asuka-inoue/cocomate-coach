@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.p-member__inner {
+  width: 100%;
+  padding-right: rem(strip-unit($padding-sp));
+  padding-left: rem(strip-unit($padding-sp));
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    max-width: rem(1130);
+    padding-right: rem(strip-unit($padding-pc));
+    padding-left: rem(strip-unit($padding-pc));
+  }
+}
+
+.p-member__slider {
+  margin-top: rem(40);
+  max-width: rem(600);
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    max-width: 100%;
+  }
+}
+
+.p-member__slider .swiper {
+  padding-left: rem(20);
+  padding-right: rem(20);
+  @include mq(md) {
+    padding-left: rem(26);
+    padding-right: rem(26);
+  }
+}
+
+.p-member__slider .swiper-slide {
+    height: auto; 
+    border: 3px solid #F5F5F5;
+  }
+
+/* 前へ次への矢印カスタマイズ */
+.p-member__slider .swiper-button-prev,
+.p-member__slider .swiper-button-next {
+  height: rem(40);
+  width: rem(40);
+  border-radius: 50%;
+  background: $brown;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 44%;
+  @include mq(md) {
+    height: rem(60);
+    width: rem(60);
+  }
+}
+
+.p-member__slider .swiper-button-prev {
+  left: 0;
+}
+
+.p-member__slider .swiper-button-next {
+  right: 0;
+}
+/* 前へ次への矢印カスタマイズ */
+.p-member__slider .swiper-button-prev:after,
+.p-member__slider .swiper-button-next:after {
+  background-image: url(../images/slider-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(13);
+  width: rem(10);
+}
+
+/* 次への矢印カスタマイズ */
+.p-member__slider .swiper-button-next:after {
+  transform: rotate(180deg);
+  
+}
+
+.p-member__btn {
+  margin-top: rem(50);
+  text-align: center;
+}

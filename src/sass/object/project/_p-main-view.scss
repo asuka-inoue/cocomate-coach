@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.p-main-view {
+  background: url(../images/mv-img.jpg) no-repeat center / cover;
+  background-color:rgba(255,255,255,0.6);
+	background-blend-mode:lighten;
+  width: 100%;
+  @include mq(md) {
+    background: none;
+    overflow: hidden;
+    position: relative;
+
+  }
+}
+
+.p-main-view::after {
+  @include mq(md) {
+    content: "";
+    background: url(../images/mv-img.jpg) no-repeat top / cover;
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    width: 68vw;
+    height: 100%;
+    position: absolute;
+    left: 32vw;
+    top: 0;
+    z-index: -1;
+  }
+  
+}
+
+.p-main-view__inner {
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  margin: auto;
+  @include mq(md) {
+    max-width: rem(1244);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+
+.p-main-view__title {
+  font-size: rem(28);
+  font-weight: 900;
+  line-height: 1.66;
+  letter-spacing: .04em;
+  @include mq(md) {
+  font-size: rem(44);
+
+  }
+}
+
+.p-main-view__desc {
+  font-size: rem(15);
+  line-height: calc(27 / 15);
+  letter-spacing: .03em;
+  font-weight: 900;
+  margin-top: rem(17);
+  margin-left: rem(27);
+}
+
+.p-main-view__btn {
+  margin-top: rem(30);
+  margin-left: rem(27);
+}

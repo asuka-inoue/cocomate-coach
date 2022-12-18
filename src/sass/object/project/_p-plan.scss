@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.p-plan {
+  background: $brown2;
+}
+
+.p-plan__cards {
+  margin-top: rem(50);
+}
+
+.p-plan__scroll {
+  overflow-x: auto;
+  @include mq(md) {
+    overflow: unset;
+  }
+}
+

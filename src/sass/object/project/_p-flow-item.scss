@@ -1,6 +1,36 @@
-@use "global"as *;
+@use "global" as *;
 
-.c-number-step {
+.p-flow-item {
+  display: flex;
+}
+
+.p-flow-item__body {
+  margin-left: rem(10);
+  @include mq(md) {
+  margin-left: rem(36);
+
+  }
+}
+
+.p-flow-item__title {
+  font-size: rem(18);
+  font-weight: 900;
+  letter-spacing: .04em;
+  line-height: calc(34 / 24);
+  @include mq(md) {
+  font-size: rem(24);
+
+  }
+}
+
+.p-flow-item__text {
+  font-size: rem(15);
+  line-height: calc(27 / 15);
+  letter-spacing: .04em;
+  margin-top: rem(8);
+}
+
+.p-flow-item__number {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +42,7 @@
   letter-spacing: 0.01em;
   text-align: center;
   width: rem(50);
-  height: rem(200);
+  // height: rem(200);
   flex-shrink: 0;
 
   @include mq(md) {
@@ -23,7 +53,8 @@
   }
 }
 
-.c-number-step span {
+
+.p-flow-item__number span {
   font-size: rem(10);
   line-height: 1;
   letter-spacing: 0.1em;
@@ -36,21 +67,23 @@
   }
 }
 
-.c-number-step::after {
+.p-flow-item__number::after {
   content: "";
   width: 2px;
-  height: rem(100);
+  min-height: rem(100);
+  height: 100%;
   background: #011748;
   margin-top: rem(30);
 
   @include mq(md) {
     width: 2px;
     height: rem(61);
+    min-height: auto;
 
   }
 }
 
-.c-number-step--circle {
+.p-flow-item:last-child .p-flow-item__number {
   color: $white;
   background: $brown;
   border-radius: 50%;
@@ -63,6 +96,6 @@
   }
 }
 
-.c-number-step--circle::after {
+.p-flow-item:last-child .p-flow-item__number::after {
   display: none;
 }

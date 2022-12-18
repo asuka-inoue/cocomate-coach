@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.p-nav {
+  height: 100vh;
+  width: 100%;
+  background: $white;
+  padding-top: rem(130);
+  overflow: auto;
+  @include mq(md) {
+    height: inherit;
+    background: none;
+    padding: 0;
+  }
+}
+
+.p-nav__items {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  min-height: rem(500);
+  @include mq(md) {
+    min-height: unset;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: rem(943);
+    margin-left: auto;
+  }
+}
+
+.p-nav__item {
+  width: 100%;
+  text-align: center;
+  @include mq(md) {
+    width: auto;
+    height: inherit;
+    flex-grow: 1;
+  }
+}
+
+.p-nav__item a {
+  display: block;
+  font-size: rem(18);
+  font-weight: bold;
+  padding: rem(13) 0;
+  @include mq(md) {
+    font-size: rem(15);
+    letter-spacing: .04em;
+    height: inherit;
+    padding: 0 rem(9);
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.p-nav__btn {
+  margin-top: rem(42);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(17);
+  @include mq(md) {
+    width: auto;
+    flex-direction: row;
+    column-gap: rem(8);
+    margin-top: 0;
+    margin-left: rem(10);
+  }
+}
+
+
+

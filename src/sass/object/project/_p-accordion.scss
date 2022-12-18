@@ -1,0 +1,63 @@
+@use "global" as *; 
+
+.p-accordion__item + .p-accordion__item {
+  margin-top: rem(20);
+}
+
+.p-accordion__btn {
+  background-color: $white;
+  color: $black;
+  font-size: rem(15);
+  line-height: calc(27 / 15);
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-align-last: left;
+  padding: rem(20) rem(55) rem(20) rem(20);
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+    cursor: pointer;
+    padding: rem(32) rem(135) rem(34) rem(64);
+
+  }
+}
+
+.p-accordion__btn::after{
+    position: absolute;
+    top: rem(15);
+    right: rem(15);
+    content:"";
+    width: rem(35);
+    height: rem(35);
+    background: url(../images/icon-open.svg) no-repeat center / contain;
+    z-index: 5;
+    @include mq(md) {
+      width: rem(42);
+      height: rem(42);
+      top: rem(32);
+    right: rem(47);
+    }
+}
+
+.p-accordion__btn.open::after{
+  background: url(../images/icon-close.svg) no-repeat center / contain;
+}
+
+.p-accordion__content {
+  display: none;
+  padding: rem(16) rem(50) rem(20) rem(20);
+  font-size: rem(15);
+  letter-spacing: .04em;
+  line-height: calc(27 / 15);
+  color: $black;
+  background: $white;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+  margin-top: rem(-18);
+  z-index: 0;
+  @include mq(md) {
+  padding: rem(16) rem(135) rem(31) rem(64);
+
+  }
+}

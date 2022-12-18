@@ -1,6 +1,51 @@
 @use "global" as *;
 
-.c-card__img {
-  aspect-ratio: calc(190 / 316 * 100);
+.c-card {
+  display: inline-block;
+}
+
+.c-card__img img {
+  aspect-ratio: 316 / 190;
   object-fit: cover;
+}
+
+.c-card__body {
+  margin-top: rem(29);
+}
+
+.c-card__body time {
+  font-size: rem(12);
+  font-weight: bold;
+  letter-spacing: .1em;
+  display: block;
+}
+
+.c-card--new time::after {
+  content: "new";
+  text-transform: uppercase;
+  font-size: rem(12);
+  margin-left: rem(9);
+}
+
+.c-card__category {
+  display: inline-block;
+  font-size: rem(12);
+  letter-spacing: .05em;
+  padding: rem(3) rem(15);
+  text-align: center;
+  min-width: rem(105);
+  margin-top: rem(8);
+  background: #E6E9F1;
+  border-radius: 5px;
+}
+
+.c-card__text {
+  font-size: rem(16);
+  font-weight: 900;
+  line-height: calc(28 / 18);
+  letter-spacing: .04em;
+  margin-top: rem(8);
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }

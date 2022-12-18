@@ -1,0 +1,31 @@
+@use "global"as *;
+
+.c-hamburger {
+  padding-left: rem(20);
+  padding-right: rem(20);
+}
+
+.c-hamburger span {
+  width: rem(35);
+  height: 3px;
+  border-radius: rem(9);
+  background: $black;
+  display: block;
+  transition: .3s;
+}
+
+.c-hamburger span:nth-child(2) {
+  margin: 6px 0;
+}
+
+.c-hamburger.is-active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.c-hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.c-hamburger.is-active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}

@@ -7,19 +7,28 @@
   align-items: center;
   color: $white;
   background: $brown;
-  font-size: rem(38);
+  font-size: rem(24);
   font-family: $font-sub;
   line-height: .8;
   letter-spacing: 0.1em;
   text-align: center;
   border-radius: 50%;
-  width: rem(100);
-  height: rem(100);
+  width: rem(50);
+  height: rem(50);
+  flex-shrink: 0;
+  @include mq(md) {
+    font-size: rem(38);
+    width: rem(100);
+    height: rem(100);
+  }
 }
 
 .c-number span {
-  font-size: rem(12);
+  font-size: rem(10);
   line-height: 1;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  @include mq(md) {
+  font-size: rem(12);
+  }
 }

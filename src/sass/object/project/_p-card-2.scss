@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.p-card-2 {
+  background: $white;
+  border-radius: 0 0 5px 5px;
+  padding: 0 0 rem(32);
+  display: flex;
+  flex-direction: column;
+}
+
+.p-card-2__title {
+  background: $black;
+  color: $white;
+  font-size: rem(20);
+  font-weight: 900;
+  line-height: calc(29 / 20);
+  letter-spacing: .04em;
+  text-align: center;
+  padding: rem(18) rem(18) rem(15);
+}
+
+.p-card-2__body {
+  padding: rem(20);
+}
+
+.p-card-2__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-card-2__money {
+  font-size: rem(35);
+  font-family: $font-sub;
+  font-weight: bold;
+  line-height: calc(42 / 35);
+  letter-spacing: .07em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.p-card-2__money span {
+  font-size: rem(13);
+  font-family: $font-main;
+  line-height: calc(19 / 13);
+  margin-left: rem(9);
+}
+
+.p-card-2__tax {
+  font-size: rem(10);
+  line-height: calc(14 / 10);
+  letter-spacing: .04em;
+  font-weight: bold;
+}
+
+.p-card-2__tax span {
+  font-size: rem(13);
+  line-height: calc(19 / 13);
+}
+
+.p-card-2__lists {
+  margin-top: rem(17);
+}
+
+.p-card-2__list {
+  display: flex;
+  align-items: center;
+  column-gap: rem(10);
+  font-size: rem(15);
+  line-height: calc(27 / 15);
+  letter-spacing: .04em;
+}
+
+.p-card-2__list + .p-card-2__list {
+  margin-top: rem(8);
+}
+
+.p-card-2__list::before {
+  content: "";
+  background: url(../images/icon-check.svg) no-repeat center / contain;
+  width: rem(18);
+  height: rem(18);
+  flex-shrink: 0;
+}
+
+.p-card-2__btn {
+  margin-top: auto;
+  margin-left: rem(19);
+  margin-right: rem(19);
+}

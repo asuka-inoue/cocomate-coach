@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.p-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  height: rem(80);
+  z-index: 10;
+  @include mq(md) {
+    height: rem(119);
+  }
+}
+
+.p-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+  @include mq(md) {
+    // max-width: rem(1440);
+    max-width: rem(1430);
+    margin: auto;
+    padding-left: rem(25);
+    padding-right: rem(25);
+    // padding-left: rem(30);
+    // padding-right: rem(30);
+  }
+}
+
+.p-header__logo {
+  height: inherit;
+  z-index: 10;
+  @include mq(md) {
+    width: 15%;
+  }
+}
+
+.p-header__logo a {
+  display: inline-flex;
+  align-items: center;
+  padding-left: rem(20);
+  padding-right: rem(20);
+  height: inherit;
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-header__logo img {
+  width: rem(150);
+  @include mq(md) {
+    width: rem(180);
+  }
+}
+
+.p-header__hamburger {
+  height: inherit;
+  z-index: 10;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-header__nav {
+  // display: none;
+  transform: translateX(100vw);
+  transition: all .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  @include mq(md) {
+    display: block;
+    position: unset;
+    transform: translateX(0);
+
+  }
+}
+
+//activeクラスをつけたら、スライドイン
+.p-header__nav.is-active {
+  transform: translateX(0);
+}

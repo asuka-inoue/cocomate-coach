@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.p-cv-area {
+  position: relative;
+  padding-top: rem(68);
+  padding-bottom: rem(98);
+  background-image: url(../images/cv-area.jpg);
+  background-size: cover;
+}
+
+.p-cv-area::after {
+  content: '';
+  background-color: rgba($brown,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.p-cv-area__wrapper {
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  @include mq(md) {
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+
+.p-cv-area__title {
+  color: $white;
+  font-size: rem(20);
+  font-weight: 900;
+  line-height: calc(38 / 24);
+  letter-spacing: .04em;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.p-cv-area__btn {
+  display: inline-block;
+  background: $white;
+  color: #011748;
+  font-size: rem(20);
+  line-height: 1.7;
+  letter-spacing: 0.07em;
+  text-align: center;
+  padding: rem(30) rem(15) rem(27);
+  margin-top: rem(37);
+  font-weight: 900;
+  @include mq(md) {
+    min-width: rem(635);
+    font-size: rem(26);
+  }
+}
+
+.p-cv-area__btn span {
+  display: block;
+  font-size: rem(16);
+  line-height: calc(19 / 16);
+  letter-spacing: .2em;
+  font-weight: 600;
+  font-family: $font-sub;
+  text-transform: uppercase;
+}

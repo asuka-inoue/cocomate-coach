@@ -31,8 +31,7 @@ body {
 }
 
 // ホバー
-a,
-button {
+a {
   @include mq(md) {
     transition: .3s;
     &:hover {

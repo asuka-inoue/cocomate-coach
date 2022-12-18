@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -20,51 +21,747 @@
   <!-- ファビコン -->
   <link rel="icon" href="data:," />
   <!-- フォント -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+  <script defer src="./js/swiper-bundle.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
+
 <body>
-  <div class="l-inner">
-
-    <!-- パーツ -->
-    <a class="c-btn c-btn--mv">予約・お問い合わせ</a>
-    <a class="c-btn-header">予約・お問い合わせ</a>
-    <a class="c-btn-header c-btn-header--blue">資料ダウンロード</a>
-    <a class="c-btn-sm">予約・お問い合わせ</a>
-    <a class="c-btn-sm c-btn-sm--blue">資料ダウンロード</a>
-    <a class="c-btn">サービスのコラム一覧を見る</a>
-
-    <h2 class="c-section-title">サービス紹介</h2>
-
-    <div class="c-number">
-      <span>point</span>01
+  <div class="l-wrapper">
+  <header class="p-header">
+    <div class="p-header__inner">
+      <h1 class="p-header__logo">
+        <a href="#">
+          <img src="./images/logo.svg" alt="cocomateコーチ">
+        </a>
+      </h1>
+      <button class="p-header__hamburger c-hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="p-header__nav p-nav js-drawer">
+        <ul class="p-nav__items">
+          <li class="p-nav__item">
+            <a href="#service">サービス紹介</a>
+          </li>
+          <li class="p-nav__item">
+            <a href="#member">メンバー紹介</a>
+          </li>
+          <li class="p-nav__item">
+            <a href="#column">コラム</a>
+          </li>
+          <li class="p-nav__item">
+            <a href="#voice">お客様の声</a>
+          </li>
+          <li class="p-nav__item">
+            <a href="#news">お知らせ</a>
+          </li>
+          <li class="p-nav__btn">
+            <a href="#" class="c-btn-header c-btn-header--blue">資料ダウンロード</a>
+            <a href="#" class="c-btn-header">予約・お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <div class="c-number-step">
-      <span>step</span>01
-    </div>
-    <div class="c-number-step c-number-step--circle">
-      <span>step</span>03
-    </div>
+  </header>
 
-    <div class="c-cards">
-    <a href="#" class="c-card">
-      <div class="c-card__img">
-        <img src="./images/card-img.jpg" alt="カード画像">
+  <main class="l-main">
+    <div class="l-main-view p-main-view">
+      <div class="p-main-view__inner">
+        <h2 class="p-main-view__title">
+          &ensp;次なる行動を引き出す<br>「cocomateコーチ」
+        </h2>
+        <p class="p-main-view__desc">
+          「cocomateコーチ」は、<br>
+          あなたのキャリア課題の解決を通じた<br>
+          成長を支援するオンライン・コーチングcocomateサービスです。
+        </p>
+        <div class="p-main-view__btn">
+          <a href="#" class="c-btn c-btn--mv">予約・お問い合わせ</a>
+        </div>
       </div>
-      <div class="c-card__meta">
-        <time datetime="2021-05-26">2021/05/26</time>
-        <span class="card__category">ピックアップ</span>
+    </div>
+    <div class="l-main-view2 p-main-view-2">
+      <div class="l-inner">
+        <h3 class="p-main-view2__title">
+          「cocomateコーチ」の思い
+        </h3>
+        <p class="p-main-view2__text">
+          人生100年時代、不確実で変化の激しいこの時代、キャリアや人生の未来を切り開くのは私たち自身です。<br>
+          働き方、生き方、学び方など、今まさに転機を迎えている方、また、これからのキャリアや人生についてじっくり考えてみたい方、ご自身の価値観や強み・弱みを内省し、あなたを取り巻く環境の理解を深めることで、次なる行動につなげるための戦略やビジョンをともに考えて行きましょう。経験豊富なコーチがあなたの成長に寄り添います。
+        </p>
       </div>
-      <p class="c-card__text">
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+    </div>
+
+    <section class="l-service p-service" id="service">
+      <div class="p-service__inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">サービス紹介</h2>
+        </div>
+        <ul class="p-service__items">
+          <li class="p-service__item p-service-item">
+            <figure class="p-service-item__img">
+              <img src="./images/service-img.jpg" alt="ミーティング中">
+              <!-- <img src="./images/dummy.jpg" alt="ミーティング中"> -->
+            </figure>
+            <div class="p-service-item__box">
+              <div class="p-service-item__wrapper">
+                <div class="c-number">
+                  <span>point</span>01
+                </div>
+                <div class="p-service-item__content">
+                  <h3 class="p-service-item__title">
+                    １on１cocomateコーチング<br>
+                    (基礎編×3回 / 月額制)
+                  </h3>
+                  <p class="p-service-item__text">
+                    キャリア上の転機（就職、転職、異動、起業、移住、進学etc.）にいる方を対象に、ご自身の価値観や強み弱みの棚卸しをした上で、「アイデンティティ」の自己理解と「適応」戦略について内省を深め、キャリアビジョンを明確にして、次なる行動を引き出していきます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="p-service__item p-service-item">
+            <figure class="p-service-item__img">
+              <img src="./images/service-img.jpg" alt="ミーティング中">
+            </figure>
+            <div class="p-service-item__box">
+              <div class="p-service-item__wrapper">
+                <div class="c-number">
+                  <span>point</span>02
+                </div>
+                <div class="p-service-item__content">
+                  <h3 class="p-service-item__title">
+                    １on１スペシャルコーチング<br>(月額制)
+                  </h3>
+                  <p class="p-service-item__text">
+                    孤独な判断を迫れることの多い経営者や経営幹部（候補）の方を対象に、経営課題の明確化や組織や人事の課題解決支援、経営ビジョンの策定から実行支援まで、様々な意思決定シーンの伴奏者・対話相手として、定期的なエグゼクティブコーチングを実施します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="p-service__item p-service-item">
+            <figure class="p-service-item__img">
+              <img src="./images/service-img.jpg" alt="ミーティング中">
+            </figure>
+            <div class="p-service-item__box">
+              <div class="p-service-item__wrapper">
+                <div class="c-number">
+                  <span>point</span>03
+                </div>
+                <div class="p-service-item__content">
+                  <h3 class="p-service-item__title">
+                    cocomateコーチング法人パック<br>(定額制またはスポット制)
+                  </h3>
+                  <p class="p-service-item__text">
+                    法人契約サービスとして、経営者や人事部の皆様とご相談の上、１on１キャリアコーチングやグループコーチングを戦略的に実行することで、貴社各階層の社員の皆様のキャリア開発や、全社ないし部署別の組織開発の支援を効果的に実現します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="p-service__btn">
+          <a href="#" class="c-btn">サービスのコラム一覧を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-member p-member" id="member">
+      <div class="p-member__inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">メンバー紹介</h2>
+          <p class="c-section-header__text">
+            カード表示のリスト作成に使えるセクションです。カード表示のリスト作成に使えるセクションです。カード表示のリスト作<br
+              class="u-desktop">成に使えるセクションです。カード表示のリスト作成に使えるセクションです。カード表示のリスト作成に使えるセクションです。
+          </p>
+        </div>
+        <div class="p-member__slider">
+          <!-- スライダーのメインコンテナの div 要素（必須） -->
+          <div class="swiper js-swiper">
+            <!-- スライドを囲む div 要素（必須） -->
+            <div class="swiper-wrapper">
+              <!-- それぞれのスライドの div 要素（必須） -->
+              <div class="swiper-slide">
+                <a href="#" class="c-slide">
+                  <div class="c-slide__wrapper">
+                    <div class="c-slide__img">
+                      <img src="./images/card-img.jpg" alt="カード画像">
+                    </div>
+                    <div class="c-slide__body">
+                      <h3 class="c-slide__title" data-en="onamae">なまえ</h3>
+                      <p class="c-slide__text">
+                        仮）テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="c-slide">
+                  <div class="c-slide__wrapper">
+                    <div class="c-slide__img">
+                      <img src="./images/card-img.jpg" alt="カード画像">
+                    </div>
+                    <div class="c-slide__body">
+                      <h3 class="c-slide__title" data-en="onamae">なまえ</h3>
+                      <p class="c-slide__text">
+                        仮）テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="c-slide">
+                  <div class="c-slide__wrapper">
+                    <div class="c-slide__img">
+                      <img src="./images/card-img.jpg" alt="カード画像">
+                    </div>
+                    <div class="c-slide__body">
+                      <h3 class="c-slide__title" data-en="onamae">なまえ</h3>
+                      <p class="c-slide__text">
+                        仮）テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="c-slide">
+                  <div class="c-slide__wrapper">
+                    <div class="c-slide__img">
+                      <img src="./images/card-img.jpg" alt="カード画像">
+                    </div>
+                    <div class="c-slide__body">
+                      <h3 class="c-slide__title" data-en="onamae">なまえ</h3>
+                      <p class="c-slide__text">
+                        仮）テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- ナビゲーションボタンの div 要素（省略可能） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="p-member__btn">
+          <a href="#" class="c-btn">メンバーブログ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-column p-column" id="column">
+      <div class="l-inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">コラム</h2>
+        </div>
+        <div class="p-column__cards p-cards">
+          <a href="#" class="p-cards__item c-card">
+            <div class="c-card__img">
+              <img src="./images/card-img.jpg" alt="カード画像">
+            </div>
+            <div class="c-card__body">
+              <time datetime="2021-05-26">2021/05/26</time>
+              <span class="c-card__category">ピックアップ</span>
+              <p class="c-card__text">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </a>
+          <a href="#" class="p-cards__item c-card">
+            <div class="c-card__img">
+              <img src="./images/card-img.jpg" alt="カード画像">
+            </div>
+            <div class="c-card__body">
+              <time datetime="2021-05-24">2021/05/24</time>
+              <span class="c-card__category">ピックアップ</span>
+              <p class="c-card__text">
+                テキストテキスト
+              </p>
+            </div>
+          </a>
+          <a href="#" class="p-cards__item c-card">
+            <div class="c-card__img">
+              <img src="./images/card-img.jpg" alt="カード画像">
+            </div>
+            <div class="c-card__body">
+              <time datetime="2021-05-20">2021/05/20</time>
+              <span class="c-card__category">ピックアップ</span>
+              <p class="c-card__text">
+                テキストテキスト
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="p-column__btn">
+          <a href="#" class="c-btn">コラム一覧</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="p-cv-area">
+      <div class="p-cv-area__wrapper">
+        <h2 class="p-cv-area__title">
+          まずはお気軽にご相談ください
+        </h2>
+        <a href="#" class="p-cv-area__btn">
+          <span>contact</span>
+          予約・お問い合わせはこちら
+        </a>
+      </div>
+    </div>
+
+    <div class="l-flow p-flow" id="flow">
+      <div class="l-inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">ご利用の流れ</h2>
+          <p class="c-section-header__text">
+            流れを説明するセクションです。流れを説明するセクションです。流れを説明するセクションです。<br>流れを説明するセクションです。流れを説明するセクションです。
+          </p>
+        </div>
+        <div class="p-flow__contents">
+          <div class="p-flow__item p-flow-item">
+            <div class="p-flow-item__number">
+              <span>step</span>01
+            </div>
+            <div class="p-flow-item__body">
+              <h3 class="p-flow-item__title">
+                ご予約・お問い合わせ
+              </h3>
+              <p class="p-flow-item__text">
+                サービスをご希望のお客様は「予約・お問い合わせ」フォームよりご希望のサービスを選択の上、ご予約をお願いいたします。
+              </p>
+            </div>
+          </div>
+          <div class="p-flow__item p-flow-item">
+            <div class="p-flow-item__number">
+              <span>step</span>02
+            </div>
+            <div class="p-flow-item__body">
+              <h3 class="p-flow-item__title">
+                ご依頼内容の確認と日程調整
+              </h3>
+              <p class="p-flow-item__text">
+                ご予約・お問い合わせをいただきましたら、弊社よりご依頼内容の確認と日程調整のご連絡をさせていただきます。日程が確定しましたら、事前課題の準備などに取り掛かっていただきます。１on１サービスにつきましては事前入金をお願いしております。
+              </p>
+            </div>
+          </div>
+          <div class="p-flow__item p-flow-item">
+            <div class="p-flow-item__number">
+              <span>step</span>03
+            </div>
+            <div class="p-flow-item__body">
+              <h3 class="p-flow-item__title">
+                サービス開始
+              </h3>
+              <p class="p-flow-item__text">
+                いよいよサービス開始です。コーチとの対話を通じて内省を深め、キャリア上の目標達成や課題解決に向けた第一歩をともに踏み出しましょう！
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="l-voice p-voice" id="voice">
+      <div class="l-inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">お客様の声</h2>
+        </div>
+        <div class="p-voice__cards p-cards">
+          <a href="#" class="p-cards__item c-card c-card--new">
+            <div class="c-card__img">
+              <img src="./images/card-img.jpg" alt="カード画像">
+            </div>
+            <div class="c-card__body">
+              <time datetime="2021-05-26">2021/05/26</time>
+              <span class="c-card__category">インタビュー</span>
+              <p class="c-card__text">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </a>
+          <a href="#" class="p-cards__item c-card">
+            <div class="c-card__img">
+              <img src="./images/card-img.jpg" alt="カード画像">
+            </div>
+            <div class="c-card__body">
+              <time datetime="2021-05-24">2021/05/24</time>
+              <span class="c-card__category">インタビュー</span>
+              <p class="c-card__text">
+                テキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </a>
+          <a href="#" class="p-cards__item c-card">
+            <div class="c-card__img">
+              <img src="./images/card-img.jpg" alt="カード画像">
+            </div>
+            <div class="c-card__body">
+              <time datetime="2021-05-20">2021/05/20</time>
+              <span class="c-card__category">インタビュー</span>
+              <p class="c-card__text">
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="p-voice__btn">
+          <a href="#" class="c-btn">お客様の声一覧</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-plan p-plan">
+      <div class="l-inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">料金プラン</h2>
+          <p class="c-section-header__text">
+            料金表などで使用します。
+          </p>
+        </div>
+        <div class="p-plan__scroll js-scroll">
+          <ul class="p-plan__cards p-cards-2">
+            <li class="p-cards-2__item p-card-2">
+              <h3 class="p-card-2__title">
+                個人の方
+              </h3>
+              <div class="p-card-2__body">
+                <div class="p-card-2__wrapper">
+                  <p class="p-card-2__money">18,000<span>円〜</span></p>
+                  <p class="p-card-2__tax">（税込）/<span>月</span></p>
+                </div>
+                <ul class="p-card-2__lists">
+                  <li class="p-card-2__list">
+                    1on1 cocomateコーチング
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                </ul>
+              </div>
+              <div class="p-card-2__btn">
+                <a class="c-btn">お申し込み</a>
+              </div>
+            </li>
+            <li class="p-cards-2__item p-card-2">
+              <h3 class="p-card-2__title">
+                法人の方
+              </h3>
+              <div class="p-card-2__body">
+                <div class="p-card-2__wrapper">
+                  <p class="p-card-2__money">12,005<span>円〜</span></p>
+                  <p class="p-card-2__tax">（税込）/<span>月</span></p>
+                </div>
+                <ul class="p-card-2__lists">
+                  <li class="p-card-2__list">
+                    cocomate研修
+                  </li>
+                  <li class="p-card-2__list">
+                    キャリアカウンセリング
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                </ul>
+              </div>
+              <div class="p-card-2__btn">
+                <a class="c-btn">お申し込み</a>
+              </div>
+            </li>
+            <li class="p-cards-2__item p-card-2">
+              <h3 class="p-card-2__title">
+                オンライン講座
+              </h3>
+              <div class="p-card-2__body">
+                <div class="p-card-2__wrapper">
+                  <p class="p-card-2__money">19,000<span>円〜</span></p>
+                  <p class="p-card-2__tax">（税込）/<span>月</span></p>
+                </div>
+                <ul class="p-card-2__lists">
+                  <li class="p-card-2__list">
+                    cocomate講座
+                  </li>
+                  <li class="p-card-2__list">
+                    クリティカルシンキング講座
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                  <li class="p-card-2__list">
+                    サポート内容
+                  </li>
+                </ul>
+              </div>
+              <div class="p-card-2__btn">
+                <a class="c-btn">お申し込み</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="p-cv-area">
+      <div class="p-cv-area__wrapper">
+        <h2 class="p-cv-area__title">
+          まずはお気軽にご相談ください
+        </h2>
+        <a href="#" class="p-cv-area__btn">
+          <span>contact</span>
+          予約・お問い合わせはこちら
+        </a>
+      </div>
+    </div>
+
+    <section class="l-news p-news" id="news">
+      <div class="l-inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">お知らせ</h2>
+          <p class="c-section-header__text">
+            お知らせなどのリスト用のセクションです。お知らせなどのリスト用のセクションです。<br>お知らせなどのリスト用のセクションです。
+          </p>
+        </div>
+        <div class="p-news__lists">
+          <a href="#" class="p-news__list c-list">
+            <div class="c-list__meta">
+              <time datetime="2020-01-01">2020.01.01</time>
+              <span class="c-list__category">プレスリリース</span>
+            </div>
+            <p class="c-list__text">
+              お知らせテキストが入ります。お知らせテキストが入ります。お知らせテキストが入ります。お知らせテキストが入ります。
+            </p>
+          </a>
+          <a href="#" class="p-news__list c-list">
+            <div class="c-list__meta">
+              <time datetime="2020-01-01">2020.01.01</time>
+              <span class="c-list__category">プレスリリース</span>
+            </div>
+            <p class="c-list__text">
+              お知らせテキストが入ります。お知らせテキストが入ります。お知らせテキストが入ります。お知らせテキストが入ります。
+            </p>
+          </a>
+          <a href="#" class="p-news__list c-list">
+            <div class="c-list__meta">
+              <time datetime="2020-01-01">2020.01.01</time>
+              <span class="c-list__category">プレスリリース</span>
+            </div>
+            <p class="c-list__text">
+              お知らせテキストが入ります。お知らせテキストが入ります。お知らせテキストが入ります。お知らせテキストが入ります。
+            </p>
+          </a>
+        </div>
+        <div class="p-news__btn">
+          <a href="#" class="c-btn">お知らせ一覧</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-faq p-faq">
+      <div class="l-inner">
+        <div class="c-section-header">
+          <h2 class="c-section-header__title">よくある質問</h2>
+          <p class="c-section-header__text">
+            よくある質問のセクションです。よくある質問のセクションです。よくある質問のセクションです。<br>よくある質問のセクションです。よくある質問のセクションです。
+          </p>
+        </div>
+        <div class="p-faq__wrapper">
+          <!-- ここからアコーディオン -->
+          <div class="p-faq__accordion p-accordion">
+            <div class="p-accordion__item">
+              <button class="p-accordion__btn js-accordion-btn">
+                １on１セッションとはなんですか？
+              </button>
+              <div class="p-accordion__content js-accordion-content">
+                クライアント（相談者）とコーチの１対１の対話のことを１on１セッションと呼びます。
+              </div>
+            </div>
+            <div class="p-accordion__item">
+              <button class="p-accordion__btn js-accordion-btn">
+                質問文テキストが入ります。質問文テキストが入ります。質問文テキストが入ります。質問文テキストが入ります。質問文テキストが入ります。
+              </button>
+              <div class="p-accordion__content js-accordion-content">
+                こたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえ
+              </div>
+            </div>
+            <div class="p-accordion__item">
+              <button class="p-accordion__btn js-accordion-btn">
+                質問文テキストが入ります。質問文テキストが入ります。質問文テキストが入ります。質問文テキストが入ります。質問文テキストが入ります。
+              </button>
+              <div class="p-accordion__content js-accordion-content">
+                こたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえこたえ
+              </div>
+            </div>
+          </div>
+          <!-- ここまでアコーディオン -->
+        </div>
+      </div>
+    </section>
+
+    <div class="p-cv-area">
+      <div class="p-cv-area__wrapper">
+        <h2 class="p-cv-area__title">
+          まずはお気軽にご相談ください
+        </h2>
+        <a href="#" class="p-cv-area__btn">
+          <span>contact</span>
+          予約・お問い合わせはこちら
+        </a>
+      </div>
+    </div>
+
+    <div class="p-cv-btn js-cv-btn">
+      <p class="p-cv-btn__text">
+        お気軽にご相談ください
       </p>
-    </a>
-  </div>
+      <div class="p-cv-btn__btn">
+        <a href="#" class="c-btn-sm c-btn-sm--blue">資料ダウンロード</a>
+      </div>
+      <div class="p-cv-btn__btn">
+        <a href="#" class="c-btn-sm">予約・お問い合わせ</a>
+      </div>
+    </div>
 
-  </div>
+  </main>
+
+
+
+  <footer class="l-footer p-footer">
+    <div class="l-inner">
+      <div class="p-footer__wrapper">
+        <ul class="p-footer__lists">
+          <li class="p-footer__list">
+            <a href="#">ホーム</a>
+          </li>
+          <li class="p-footer__list">
+            <a href="#service">サービス紹介</a>
+          </li>
+          <li class="p-footer__list">
+            <a href="#member">メンバー紹介</a>
+          </li>
+          <li class="p-footer__list">
+            <a href="#flow">ご利用の流れ</a>
+          </li>
+          <li class="p-footer__list">
+            <a href="">料金プラン</a>
+          </li>
+          <li class="p-footer__list">
+            <a href="">よくある質問</a>
+          </li>
+        </ul>
+        <ul class="p-footer__lists">
+          <li class="p-footer__list p-footer__list--sub">
+            <a href="#column">コラム</a>
+            <ul class="p-footer__sublists">
+              <li class="p-footer__sublist">
+                <a href="#">メンバーブログ</a>
+              </li>
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ2</a>
+              </li>
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="p-footer__lists">
+          <li class="p-footer__list p-footer__list--sub">
+            <a href="#voice">お客様の声</a>
+            <ul class="p-footer__sublists">
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ1</a>
+              </li>
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ2</a>
+              </li>
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="p-footer__lists">
+          <li class="p-footer__list p-footer__list--sub">
+            <a href="#news">お知らせ</a>
+            <ul class="p-footer__sublists">
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ1</a>
+              </li>
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ2</a>
+              </li>
+              <li class="p-footer__sublist">
+                <a href="#">カテゴリ3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <ul class="p-footer__links">
+        <li class="p-footer__link">
+          <a href="#">プライバシーポリシー</a>
+        </li>
+        <li class="p-footer__link">
+          <a href="#">利用規約</a>
+        </li>
+      </ul>
+    </div>
+    <div class="p-footer__bottom">
+      <div class="l-inner">
+        <div class="p-footer__wrapper2">
+          <h2 class="p-footer__logo">
+            <a href="#"><img src="./images/logo.svg" alt="cocomateコーチ"></a>
+          </h2>
+          <div class="p-footer__copy">
+            <small>(c) All Rights Reserved.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 </body>
+
 </html>

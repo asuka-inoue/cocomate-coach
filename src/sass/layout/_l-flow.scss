@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-flow {
+  padding-top: rem(50);
+  padding-bottom: rem(50);
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+}
