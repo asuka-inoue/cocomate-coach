@@ -96,6 +96,11 @@ jQuery(function ($) {
   window.onload = function() {
     new ScrollHint('.js-scroll');
 }
+new ScrollHint('.js-scroll', {
+  i18n: {
+    scrollable: 'スクロールできます'
+  }
+});
 
 //アコーディオン
 $('.js-accordion-btn').on('click', function() {//タイトル要素をクリックしたら
@@ -111,12 +116,6 @@ $('.js-accordion-btn').on('click', function() {//タイトル要素をクリッ�
     $(findElm).slideDown(500);//アコーディオンを開く
   }
 });
-
-//ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作
-$(window).on('load', function(){
-  $('.p-accordion__item:first-child .js-accordion-btn').addClass('open'); //はじめのp-accordion__itemにある.js-accordion-btnにopenクラスを追加    
-  $('.p-accordion__item:first-child .js-accordion-content').slideDown(500);//アコーディオンを開く
-  });
 
 
 });

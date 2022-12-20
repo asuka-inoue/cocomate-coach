@@ -19,12 +19,15 @@
 }
 
 .p-cv-area__wrapper {
+  max-width: rem(640);
   padding-left: $padding-sp;
   padding-right: $padding-sp;
+  margin: auto;
   text-align: center;
   position: relative;
   z-index: 1;
   @include mq(md) {
+    max-width: rem(685);
     padding-left: $padding-pc;
     padding-right: $padding-pc;
   }
@@ -42,6 +45,7 @@
 }
 
 .p-cv-area__btn {
+  width: 100%;
   display: inline-block;
   background: $white;
   color: #011748;
@@ -52,8 +56,8 @@
   padding: rem(30) rem(15) rem(27);
   margin-top: rem(37);
   font-weight: 900;
+  transition: .5s;
   @include mq(md) {
-    min-width: rem(635);
     font-size: rem(26);
   }
 }
@@ -67,3 +71,12 @@
   font-family: $font-sub;
   text-transform: uppercase;
 }
+
+.p-cv-area__btn:hover {
+  @include mq(md) {
+    background: #011748;
+    color: $white;
+    opacity: 1;
+  }
+}
+

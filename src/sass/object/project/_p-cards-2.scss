@@ -4,10 +4,13 @@
   display: flex;
   column-gap: rem(15);
   @include mq(md) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
     gap: rem(30) rem(15);
   }
 }
 
-
+.p-cards-2__item {
+  @include mq(md) {
+    width: calc((100% - #{rem(15)} * 2) / 3);
+  }
+}

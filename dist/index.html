@@ -27,12 +27,12 @@
     href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
     rel="stylesheet">
   <!-- css -->
-  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.js"></script>
   <script defer src="./js/swiper-bundle.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
@@ -429,7 +429,7 @@
       </div>
     </section>
 
-    <section class="l-plan p-plan">
+    <section class="l-plan p-plan" id="plan">
       <div class="l-inner">
         <div class="c-section-header">
           <h2 class="c-section-header__title">料金プラン</h2>
@@ -598,7 +598,7 @@
       </div>
     </section>
 
-    <section class="l-faq p-faq">
+    <section class="l-faq p-faq" id="faq">
       <div class="l-inner">
         <div class="c-section-header">
           <h2 class="c-section-header__title">よくある質問</h2>
@@ -610,7 +610,7 @@
           <!-- ここからアコーディオン -->
           <div class="p-faq__accordion p-accordion">
             <div class="p-accordion__item">
-              <button class="p-accordion__btn js-accordion-btn">
+              <button class="p-accordion__btn js-accordion-btn open">
                 １on１セッションとはなんですか？
               </button>
               <div class="p-accordion__content js-accordion-content">
@@ -684,10 +684,10 @@
             <a href="#flow">ご利用の流れ</a>
           </li>
           <li class="p-footer__list">
-            <a href="">料金プラン</a>
+            <a href="#plan">料金プラン</a>
           </li>
           <li class="p-footer__list">
-            <a href="">よくある質問</a>
+            <a href="#faq">よくある質問</a>
           </li>
         </ul>
         <ul class="p-footer__lists">

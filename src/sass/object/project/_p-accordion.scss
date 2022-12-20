@@ -61,3 +61,7 @@
 
   }
 }
+
+.p-accordion__item:first-child .p-accordion__content {
+  display: block;
+}
