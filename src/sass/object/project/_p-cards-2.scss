@@ -10,6 +10,7 @@
 }
 
 .p-cards-2__item {
+  min-height: rem(481);
   @include mq(md) {
     width: calc((100% - #{rem(15)} * 2) / 3);
   }
